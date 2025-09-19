@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Mixer — เว็บสุ่มสีสำหรับสรุปอ่านสอบ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="video/mixkit-shots-of-multicolored-ink-under-water-background-video-19171-hd-ready.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h1>📚 Color Mixer</h1>
+      <p>สุ่มสีสวยๆสำหรับโน๊ต</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="paper">
+      <section class="controls">
+        <label>จำนวนสี: 
+          <input type="number" id="colorCount" min="1" max="8" value="4">
+        </label>
+        <label>โหมด:
+          <select id="mode">
+            <option value="random">สุ่มทุกสี</option>
+            <option value="pastel">พาสเทล</option>
+            <option value="contrast">คอนทราสต์สูง</option>
+          </select>
+        </label>
+        <button id="generate">🎲 สุ่มสี</button>
+      </section>
+
+      <section id="palette" class="palette"></section>
+
+      <section class="actions">
+        <button id="downloadPNG">📥 บันทึกโค้ดสี PNG</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
